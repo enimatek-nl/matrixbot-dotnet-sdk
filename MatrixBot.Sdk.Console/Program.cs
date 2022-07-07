@@ -1,11 +1,16 @@
 ﻿var matrixBot = new MatrixBot.Sdk.MatrixBot();
 
-matrixBot.OnEvent += (object? sender, MatrixBot.Sdk.MatrixBotEventArgs e) =>
+matrixBot.OnEvent += async (object? sender, MatrixBot.Sdk.MatrixBotEventArgs e) =>
 {
-    Console.WriteLine($"{e.RoomId} : {e.Event.Sender}");
+    Console.WriteLine($"{e.RoomId} : {e.Event.Sender} : {e.Event.Content?.Body}");
+    if (sender is MatrixBot.Sdk.MatrixBot matrixBot)
+    {
+        await matrixBot.PostRoomMessage(e.RoomId, "hello world!", @"<b>hello world!</b>");
+    }
 };
 
 matrixBot.Start();
+
 Console.WriteLine("Started MatrixBot.");
 
 var keepAlive = true;

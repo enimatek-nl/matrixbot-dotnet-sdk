@@ -137,11 +137,14 @@ public class MatrixBot
                 {
                     foreach (var ev in room.Value.TimeLine.Events)
                     {
-                        var args = new MatrixBotEventArgs(roomId, ev);
-                        var handler = OnEvent;
-                        if (handler is not null)
+                        if (ev.Sender != _config.UserId)
                         {
-                            handler(this, args);
+                            var args = new MatrixBotEventArgs(roomId, ev);
+                            var handler = OnEvent;
+                            if (handler is not null)
+                            {
+                                handler(this, args);
+                            }
                         }
                     }
                 }
