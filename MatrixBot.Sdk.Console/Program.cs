@@ -20,4 +20,8 @@ Console.CancelKeyPress += (object? sender, ConsoleCancelEventArgs e) =>
 while (keepAlive)
 {
     Thread.Sleep(5000);
+    
+    //matrixBot.GetJoinedRooms();
+    //matrixBot.GetProfile();
+    //matrixBot.PostRoomMessage();
 }

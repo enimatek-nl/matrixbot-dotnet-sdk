@@ -2,6 +2,12 @@
 
 namespace MatrixBot.Sdk;
 
+public class MatrixBotJsonSend
+{
+    [JsonPropertyName("event_id")]
+    public string? EventId { get; set; }
+}
+
 public class MatrixBotJsonLogin
 {
     [JsonPropertyName("access_token")]

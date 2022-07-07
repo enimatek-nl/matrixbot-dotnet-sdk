@@ -34,6 +34,7 @@ public class MatrixBot
     private ILogger _logger;
     private MatrixBotConfig? _config;
 
+    private long _requestId = 0L;
     private bool _isSyncing = false;
     public bool IsSyncing
     {
@@ -99,9 +100,6 @@ public class MatrixBot
         _isSyncing = true;
         var handler = OnSync;
         handler(this, new EventArgs());
-
-        //var profile = await DoRequest<MatrixBotJsonProfile>($"profile/{_config.UserId}", HttpMethod.Get);
-        //var rooms = await DoRequest<MatrixBotJsonRooms>($"joined_rooms", HttpMethod.Get);
     }
 
     public void Stop()
@@ -162,6 +160,28 @@ public class MatrixBot
             var handler = OnSync;
             handler(this, new EventArgs());
         }
+    }
+
+    public async Task<MatrixBotJsonSend?> PostRoomMessage(string roomId, string plain, string formatted)
+    {
+        var content = new
+        {
+            msgtype = "m.text",
+            format = "org.matrix.custom.html",
+            body = plain,
+            formatted_body = formatted
+        };
+        return await DoRequest<MatrixBotJsonSend>($"rooms/{Uri.EscapeDataString(roomId)}/send/m.room.message", HttpMethod.Post, content);
+    }
+
+    public async Task<MatrixBotJsonRooms?> GetJoinedRooms()
+    {
+        return await DoRequest<MatrixBotJsonRooms>($"joined_rooms", HttpMethod.Get);
+    }
+
+    public async Task<MatrixBotJsonProfile?> GetProfile()
+    {
+        return await DoRequest<MatrixBotJsonProfile>($"profile/{_config?.UserId}", HttpMethod.Get);
     }
 
     private async Task<T?> DoRequest<T>(string path, HttpMethod method, object? body = null, string[]? query = null)
