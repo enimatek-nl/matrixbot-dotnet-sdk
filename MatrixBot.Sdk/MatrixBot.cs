@@ -184,6 +184,11 @@ public class MatrixBot
         return await DoRequest<MatrixBotJsonProfile>($"profile/{_config?.UserId}", HttpMethod.Get);
     }
 
+    public async Task<MatrixBotJsonJoin?> PostJoinRoom(string roomId)
+    {
+        return await DoRequest<MatrixBotJsonJoin>($"join/{Uri.EscapeDataString(roomId)}", HttpMethod.Post);
+    }
+
     private async Task<T?> DoRequest<T>(string path, HttpMethod method, object? body = null, string[]? query = null)
     {
         var q = $"?access_token={_config?.AccessToken}";

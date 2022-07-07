@@ -8,6 +8,12 @@ public class MatrixBotJsonSend
     public string? EventId { get; set; }
 }
 
+public class MatrixBotJsonJoin
+{
+    [JsonPropertyName("room_id")]
+    public string? RoomId { get; set; }
+}
+
 public class MatrixBotJsonLogin
 {
     [JsonPropertyName("access_token")]
