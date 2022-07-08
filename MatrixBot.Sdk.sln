@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 		README.md = README.md
 		LICENSE = LICENSE
-		.github/workflows/dotnetcore.yml = dotnetcore.yml
+		.github\workflows\dotnetcore.yml = .github\workflows\dotnetcore.yml
 	EndProjectSection
 EndProject
 Global
@@ -35,5 +35,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A507A94C-8CAE-4E28-958A-518FF6B5A680}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		description = This open-source library allows you to build .NET chat bots compatible with the Matrix Protocol. It has support for a limited subset of the APIs.
 	EndGlobalSection
 EndGlobal

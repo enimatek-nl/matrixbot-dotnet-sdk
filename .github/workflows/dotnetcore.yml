@@ -28,7 +28,7 @@ jobs:
       run: dotnet build -c Release --no-restore
 
     - name: Pack
-      run: dotnet pack MatrixBot.SDK/MatrixBot.SDK.csproj -c Release --no-restore --no-build --include-symbols -p:SymbolPackageFormat=snupkg -o .
+      run: dotnet pack MatrixBot.Sdk/MatrixBot.Sdk.csproj -c Release --no-restore --no-build --include-symbols -p:SymbolPackageFormat=snupkg -o .
 
     - name: Push to NuGet
       run: dotnet nuget push *.nupkg --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}}
