@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 		README.md = README.md
 		LICENSE = LICENSE
+		.github/workflows/dotnetcore.yml = dotnetcore.yml
 	EndProjectSection
 EndProject
 Global
