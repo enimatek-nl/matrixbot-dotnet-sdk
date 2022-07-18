@@ -1,19 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 25.0.1700.5
+VisualStudioVersion = 25.0.1700.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixBot.Sdk", "MatrixBot.Sdk\MatrixBot.Sdk.csproj", "{3EC094E6-FDBE-4BB8-B289-CF47B5869C1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixBot.Sdk", "MatrixBot.Sdk\MatrixBot.Sdk.csproj", "{90E2C4E4-66D0-4C40-91AA-45D5988D4970}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixBot.Sdk.Console", "MatrixBot.Sdk.Console\MatrixBot.Sdk.Console.csproj", "{88C61E28-4226-4AE8-8A82-593E448A8522}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8F3DA856-9E76-42F5-B5B4-71235452A87E}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		.github\workflows\dotnetcore.yml = .github\workflows\dotnetcore.yml
-		LICENSE = LICENSE
-		README.md = README.md
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixBot.Sdk.Console", "MatrixBot.Sdk.Console\MatrixBot.Sdk.Console.csproj", "{37553DFD-DE0E-4CD4-9C1F-A449AB0E67A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,19 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3EC094E6-FDBE-4BB8-B289-CF47B5869C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3EC094E6-FDBE-4BB8-B289-CF47B5869C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3EC094E6-FDBE-4BB8-B289-CF47B5869C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3EC094E6-FDBE-4BB8-B289-CF47B5869C1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88C61E28-4226-4AE8-8A82-593E448A8522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88C61E28-4226-4AE8-8A82-593E448A8522}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88C61E28-4226-4AE8-8A82-593E448A8522}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88C61E28-4226-4AE8-8A82-593E448A8522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E2C4E4-66D0-4C40-91AA-45D5988D4970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E2C4E4-66D0-4C40-91AA-45D5988D4970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E2C4E4-66D0-4C40-91AA-45D5988D4970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E2C4E4-66D0-4C40-91AA-45D5988D4970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37553DFD-DE0E-4CD4-9C1F-A449AB0E67A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37553DFD-DE0E-4CD4-9C1F-A449AB0E67A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37553DFD-DE0E-4CD4-9C1F-A449AB0E67A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37553DFD-DE0E-4CD4-9C1F-A449AB0E67A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A507A94C-8CAE-4E28-958A-518FF6B5A680}
+		SolutionGuid = {E3A8E192-6AEE-4BF6-9302-97EED72688D8}
 	EndGlobalSection
 EndGlobal

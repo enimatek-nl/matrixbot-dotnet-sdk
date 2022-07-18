@@ -10,17 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Microsoft.Extensions.Logging" />
-    <None Remove="Microsoft.Extensions.Logging.Console" />
-    <None Remove="System.Text.Json" />
-    <None Remove="README.md" />
-    <None Remove="LICENSE" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="6.0.5" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="README.md" />
-    <Compile Include="LICENSE" />
   </ItemGroup>
 </Project>
