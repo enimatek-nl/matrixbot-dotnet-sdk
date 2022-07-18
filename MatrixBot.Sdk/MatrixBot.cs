@@ -182,9 +182,9 @@ public class MatrixBot
         return await DoRequest<MatrixBotJsonRooms>($"joined_rooms", HttpMethod.Get);
     }
 
-    public async Task<MatrixBotJsonProfile?> GetProfile()
+    public async Task<MatrixBotJsonProfile?> GetProfile(string? senderId = null)
     {
-        return await DoRequest<MatrixBotJsonProfile>($"profile/{_config?.UserId}", HttpMethod.Get);
+        return await DoRequest<MatrixBotJsonProfile>($"profile/{senderId ?? _config?.UserId}", HttpMethod.Get);
     }
 
     public async Task<MatrixBotJsonJoin?> PostJoinRoom(string roomId)
