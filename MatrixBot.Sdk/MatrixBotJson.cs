@@ -94,3 +94,31 @@ public class MatrixBotJsonSyncEventContent
     [JsonPropertyName("avatar_url")]
     public string? AvatarUrl { get; set; }
 }
+
+public class MatrixBotJsonState
+{
+    [JsonPropertyName("age")]
+    public int? Age { get; set; }
+    [JsonPropertyName("content")]
+    public MatrixBotJsonStateContent? Content { get; set; }
+    [JsonPropertyName("event_id")]
+    public string? EventId { get; set; }
+    [JsonPropertyName("room_id")]
+    public string? RoomId { get; set; }
+    [JsonPropertyName("sender")]
+    public string? Sender { get; set; }
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+public class MatrixBotJsonStateContent
+{
+    [JsonPropertyName("aliases")] //m.room.aliases
+    public string[]? Aliases { get; set; }
+    [JsonPropertyName("creator")] //m.room.create
+    public string? Creator { get; set; }
+    [JsonPropertyName("join_rule")] // m.room.join_rules
+    public string? JoinRule { get; set; }
+    [JsonPropertyName("name")] // m.room.name
+    public string? Name { get; set; }
+}
