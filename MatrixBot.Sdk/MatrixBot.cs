@@ -192,9 +192,9 @@ public class MatrixBot
         return await DoRequest<MatrixBotJsonJoin>($"join/{Uri.EscapeDataString(roomId)}", HttpMethod.Post);
     }
 
-    public async Task<MatrixBotJsonState?> StateEvent(string roomId, string eventType, string stateKey)
+    public async Task<MatrixBotJsonStateContent?> StateEvent(string roomId, string eventType, string stateKey)
     {
-        return await DoRequest<MatrixBotJsonState>($"rooms/{Uri.EscapeDataString(roomId)}/state/{eventType}/{stateKey}", HttpMethod.Get);
+        return await DoRequest<MatrixBotJsonStateContent>($"rooms/{Uri.EscapeDataString(roomId)}/state/{eventType}/{stateKey}", HttpMethod.Get);
     }
 
     private async Task<T?> DoRequest<T>(string path, HttpMethod method, object? body = null, string[]? query = null)

@@ -1,15 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <Description>This open-source library allows you to build .NET chat bots compatible with the Matrix Protocol. It has support for a limited subset of the APIs.</Description>
-    <Version>1.0.2</Version>
-    <Authors>enimatek-nl</Authors>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="6.0.5" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Description>This open-source library allows you to build .NET chat bots compatible with the Matrix Protocol. It has support for a limited subset of the APIs.</Description>
+		<Version>1.0.3</Version>
+		<Authors>enimatek-nl</Authors>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>LICENSE</PackageLicenseExpression>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="System.Text.Json" Version="6.0.5" />
+		<None Include="README.md" Pack="true" PackagePath="" />
+		<None Include="LICENSE" Pack="true" PackagePath="" />
+	</ItemGroup>
 </Project>

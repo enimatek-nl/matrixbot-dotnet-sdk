@@ -95,22 +95,6 @@ public class MatrixBotJsonSyncEventContent
     public string? AvatarUrl { get; set; }
 }
 
-public class MatrixBotJsonState
-{
-    [JsonPropertyName("age")]
-    public int? Age { get; set; }
-    [JsonPropertyName("content")]
-    public MatrixBotJsonStateContent? Content { get; set; }
-    [JsonPropertyName("event_id")]
-    public string? EventId { get; set; }
-    [JsonPropertyName("room_id")]
-    public string? RoomId { get; set; }
-    [JsonPropertyName("sender")]
-    public string? Sender { get; set; }
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
-}
-
 public class MatrixBotJsonStateContent
 {
     [JsonPropertyName("aliases")] //m.room.aliases

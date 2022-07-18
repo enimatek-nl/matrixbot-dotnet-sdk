@@ -6,6 +6,8 @@ matrixBot.OnEvent += async (object? sender, MatrixBot.Sdk.MatrixBotEventArgs e) 
     if (sender is MatrixBot.Sdk.MatrixBot matrixBot)
     {
         await matrixBot.PostRoomMessage(e.RoomId, "hello world!", @"<b>hello world!</b>");
+        var state = await matrixBot.StateEvent(e.RoomId, "m.room.name", "");
+        var profile = await matrixBot.GetProfile(e.Event.Sender);
     }
 };
 
