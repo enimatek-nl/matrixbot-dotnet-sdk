@@ -36,7 +36,4 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A507A94C-8CAE-4E28-958A-518FF6B5A680}
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		description = This open-source library allows you to build .NET chat bots compatible with the Matrix Protocol. It has support for a limited subset of the APIs.
-	EndGlobalSection
 EndGlobal

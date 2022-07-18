@@ -4,6 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Description>This open-source library allows you to build .NET chat bots compatible with the Matrix Protocol. It has support for a limited subset of the APIs.</Description>
+    <Version>1.0.1</Version>
+    <Authors>enimatek-nl</Authors>
   </PropertyGroup>
 
   <ItemGroup>
